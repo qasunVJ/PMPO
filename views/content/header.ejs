@@ -1,0 +1,43 @@
+<div class="header_wrap">
+	<div class="logo"><div><a href="/">PMPO</a></div>
+		<div class="tagline">PROJECT</br>MANAGEMENT</br>PLATFORM</br>for OBA/OGA</div>
+	</div>
+
+<% if (title=='landing' || title=='more') { %>
+	<div class="user_auth_bar">
+		<a href="/signin"><div class="signIn_link">Sign In</div></a>
+		<span class="or">or</span>
+		<a href="/login"><div class="logIn_btn">LOG IN</div></a>
+	</div>
+<% }else if (title=='login') { %>
+	<div class="user_auth_bar">
+		<a href="/signin"><div class="signIn_link">Sign In</div></a>
+	</div>
+<% }else if (title=='signin') { %>
+	<div class="user_auth_bar">
+		<a href="/login"><div class="logIn_btn">LOG IN</div></a>
+	</div>
+<% }else{ %>
+	<div class="nav_bar">
+
+		<ul>
+			<a href="home.html"><li class="nav_active">Home</li></a>
+			<a href="my_projects.html"><li class="nav_btn">My Projects</li></a>
+			<a href="discussions.html"><li class="nav_btn">Discussions</li></a>
+		</ul>
+
+		<ul id="user_acc_panel">
+			<li class="user_name"><%= fname %> <%= lname %></li>
+			<li class="user_btn">
+				<img src="/images/user.svg" id="user_pic">	
+				<ul id="user_settings">
+					<a href="acc_settings.html"><li class="nav_btn">Account Settings</li></a>
+					<a href="/"><li class="nav_btn">Sign Out</li></a>
+				</ul>
+			</li>
+		</ul>
+		
+	</div>
+<% }; %>
+	
+</div>

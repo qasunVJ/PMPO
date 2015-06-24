@@ -1,0 +1,28 @@
+{
+	"landing":[
+	{
+		"img":"discuss.svg",
+		"tag":"DISCUSS",
+		"summery":"Discuss big ideas with your fellow batch mates and put them up to work!",
+
+		"discription": "In this platform, there are two parties that can interact with each other through a web based system. One is the school and the other one is the OBA/OGA. At the school end, they can put the needs, ideas to be executed in the future etc. with a complete detailed plan that includes budget required, operation breakdown etc. All these projects and details can be seen by the OBA/OGA at their end. All the major projects that are big in scale available for any member to contribute him/herself. Other projects that are not very big in scale can be checked by anyone who has the authority to view these projects (the ones who have registered as batch presidents) and can pick one (or more) as their project and go ahead to continue it with their batch.</br></br>All the projects that are picked up by their presidents are available to other members of the group (batch) to check, study the operations breakdown and give comments and suggestions. At the same time, they can do money donations to the group account right away through credit cards. Once the required resources for the project are fulfilled, the president of the group can transfer the money to schools account allowing them to commence the execution of the project. All the details like, how the money is spent throughout the whole project and the progress report are available for all the members of the group to check and have an idea of the execution. "
+	},{
+		"img":"initiate.svg",
+		"tag":"INITIATE",
+		"summery":"Give power and hope to on-going projects with your donations</br>or</br>Pick your own project or any of others from the board and initiate it with your friends!",
+
+		"discription": "In this platform, there are two parties that can interact with each other through a web based system. One is the school and the other one is the OBA/OGA. At the school end, they can put the needs, ideas to be executed in the future etc. with a complete detailed plan that includes budget required, operation breakdown etc. All these projects and details can be seen by the OBA/OGA at their end. All the major projects that are big in scale available for any member to contribute him/herself. Other projects that are not very big in scale can be checked by anyone who has the authority to view these projects (the ones who have registered as batch presidents) and can pick one (or more) as their project and go ahead to continue it with their batch.</br></br>All the projects that are picked up by their presidents are available to other members of the group (batch) to check, study the operations breakdown and give comments and suggestions. At the same time, they can do money donations to the group account right away through credit cards. Once the required resources for the project are fulfilled, the president of the group can transfer the money to schools account allowing them to commence the execution of the project. All the details like, how the money is spent throughout the whole project and the progress report are available for all the members of the group to check and have an idea of the execution. "
+	},{
+		"img":"manage.svg",
+		"tag":"MANAGE",
+		"summery":"Raise funds, view timelines, monitor processes, utilize resources and simply, manage your whole project untill the end of it, just in a snap!",
+
+		"discription": "In this platform, there are two parties that can interact with each other through a web based system. One is the school and the other one is the OBA/OGA. At the school end, they can put the needs, ideas to be executed in the future etc. with a complete detailed plan that includes budget required, operation breakdown etc. All these projects and details can be seen by the OBA/OGA at their end. All the major projects that are big in scale available for any member to contribute him/herself. Other projects that are not very big in scale can be checked by anyone who has the authority to view these projects (the ones who have registered as batch presidents) and can pick one (or more) as their project and go ahead to continue it with their batch.</br></br>All the projects that are picked up by their presidents are available to other members of the group (batch) to check, study the operations breakdown and give comments and suggestions. At the same time, they can do money donations to the group account right away through credit cards. Once the required resources for the project are fulfilled, the president of the group can transfer the money to schools account allowing them to commence the execution of the project. All the details like, how the money is spent throughout the whole project and the progress report are available for all the members of the group to check and have an idea of the execution. "
+	}],
+
+	"column_deco":[{
+		"col_index_all": "col-sm-4",
+		"col_more_txt" : "col-lg-7",
+		"col_more_img" : "col-lg-5"
+	}]
+}

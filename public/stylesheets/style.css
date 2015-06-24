@@ -1,0 +1,405 @@
+@charset "utf-8";
+
+/*dark blue: #0D1F30
+blue: #3B6670
+light blue: #8BADA3
+beiage: #F0E3C0
+light green: #DB6C0F*/
+
+@font-face{
+	font-family:thin_body_sego;
+	src:url(../fonts/segoeuil.ttf);
+}
+
+@font-face{
+	font-family:reg_nav_sego;
+	src:url(../fonts/segoeui.ttf);
+}
+
+@font-face{
+	font-family:main_headFont;
+	src:url(../fonts/segoeuib.ttf);
+}
+
+body{
+	margin: 0px;
+	font-family: Helvetica;
+}
+
+header{
+	width: 100%;
+	height: 60px;
+	background-color: #0D1F30;
+}
+
+.logo{
+	color: #ffffff;
+	font-family: main_headFont;
+	font-size: 33px;
+	margin-left: 20px;
+	padding:5px;
+	float: left;
+}
+
+.logo div{
+	float: left;
+	display: inline-block;
+}
+
+.logo div a{
+		text-decoration: none;
+	color: #ffffff;
+}
+
+.tagline{
+	font-family: thin_body_sego;
+	font-size: 8px;
+	line-height: 7px;
+	margin: 10px;
+	font-weight: normal;
+	color: #8BADA3;
+}
+
+.nav_bar{
+	margin: 0 auto;
+	margin: 15px;
+	color: #ffffff;
+	float: right;
+}
+
+.nav_bar ul{
+	display: inline-block;
+}
+
+.nav_btn{
+	display: block;
+	font-family: thin_body_sego;
+	list-style: none;
+	padding: 5px;
+	padding-top: 3px;
+	margin-right: 30px;
+	border-radius: 3px;
+	font-size: 13px;
+	float: left;
+	transition: background-color 0.5s ease;
+}
+
+.nav_btn:hover{
+	background-color: #3B6670;
+}
+
+.nav_bar a{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.nav_bar a:hover{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.nav_active{
+	display: block;
+	font-family: thin_body_sego;
+	background-color: #3B6670;
+	list-style: none;
+	padding: 5px;
+	padding-top: 3px;
+	margin-right: 30px;
+	border-radius: 3px;
+	font-size: 13px;
+	float: left;
+}
+
+.nav_active a{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.nav_active a:hover{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.user_name{
+	display: block;
+	font-family: reg_nav_sego;
+	font-size: 16px;
+	list-style: none;
+	padding: 2px;
+	margin-right: 30px;
+	float: left;
+}
+
+.user_btn{
+	display: block;
+	font-family: reg_nav_sego;
+	font-size: 16px;
+	list-style: none;
+	padding: 2px;
+	margin-right: 30px;
+	float: left;
+}
+
+li.user_btn img:hover{
+	cursor: pointer;
+}
+
+.nav_bar ul li.user_btn #user_icon{
+	background-image: url("../public/images/download.png");
+	width: 50px;
+	height: 50px;
+}
+
+
+
+#user_settings{
+	display: block;
+	width: 170px;
+	box-shadow: 0px 4px 10px #0D1F30;
+	background-color: #0D1F30;
+	padding-bottom: 5px;
+	padding-top: 10px;
+	padding-left:10px;
+	position: absolute;
+	border-bottom-right-radius: 7px;
+	border-bottom-left-radius: 7px;
+	right: 2.7em;
+	top: -50em;
+	opacity: 0;
+	transition: opacity 0.2s ease-in;
+}
+
+#user_settings .nav_btn{
+	float: none;
+	text-align: right;
+	margin-bottom: 5px;
+	margin-right: 10px;
+}
+
+
+ul#user_settings a:last-child li{
+	color: #8BADA3;
+}
+
+
+/*.nav_btn:hover{
+	border-radius: 5px;
+	background-color: #990055;
+	padding-top: 3px;
+	padding-bottom: 5px;
+	padding-left: 7px;
+	padding-right: 7px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #ffffff;
+}*/
+
+.logIn_btn{
+	font-size: 15px;
+	font-weight: bold;
+	color: #ffffff;
+	padding: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color:#DB6C0F;
+	border-radius: 7px;
+	float: left;
+	margin: 0 auto;
+	transition: background-color 0.5s ease;
+}
+
+
+.logIn_btn:hover{
+	font-size: 15px;
+	font-weight: bold;
+	color: #ffffff;
+	padding: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color:#3B6670;
+	border-radius: 7px;
+	float: left;
+	margin: 0 auto;
+}
+
+.signIn_link{
+	font-size: 15px;
+	font-family: thin_body_sego;
+	color: #8BADA3;
+	padding: 10px;
+	float: left;
+	margin: 0 auto;
+	transition: color 0.5s ease;
+}
+
+.signIn_link:hover{
+	font-size: 15px;
+	color: #ffffff;
+	padding: 10px;
+	float: left;
+	margin: 0 auto;
+}
+
+.user_auth_bar{
+	margin: 13px;
+	float: right;
+	display: inline-block;
+}
+
+.or{
+	font-size: 15px;
+	font-family: thin_body_sego;
+	color: #F0E3C0;
+	padding: 10px;
+	float: left;
+}
+
+/*======================================================*/
+.index_img_wrap{
+	margin-top: 100px;
+	margin-right: 10%;
+	margin-left: 10%;
+	margin-bottom: 50px;
+}
+
+.index_img_wrap .row div{
+	text-align: center;
+	margin-top: 30px;
+}
+
+.index_img{
+	opacity: 0.2;
+}
+
+.more_index_img{
+	width: 300px;
+	opacity: 0.2;
+}
+
+.index_img_disc{
+	width:200px;
+	font-family: thin_body_sego;
+	font-size: 13px;
+	color: #0D1F30;
+	margin:0 auto;
+	margin-top: 20px;
+
+}
+
+.intro_txt_exlarg{
+	font-family: main_headFont; 
+	font-size: 30px;
+	color: #F0E3C0;
+	opacity: 0.6;
+}
+
+/*==============================================*/
+
+.read_more{
+	font-family: thin_body_sego;
+	font-size: 12px;
+	text-decoration: none;
+	text-align: center;
+	color: #F0E3C0;
+	opacity: 0.8;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	transition: color 0.5s ease;
+}
+
+.read_more div.logIn_btn{
+	font-weight: normal;
+	width: 150px;
+	float: none;
+}
+
+.read_more:hover, .read_more a:hover{
+	font-family: thin_body_sego;
+	font-size: 12px;
+	text-decoration: none;
+	color: #ffffff;
+	opacity: 1;
+}
+
+.more_pmpo{
+	text-align: justify;
+	font-family: thin_body_sego;
+	color: #ffffff;
+}
+
+.more_pmpo a, .more_pmpo a:hover{
+	text-decoration: none;
+	color: #0D1F30;
+	font-weight: bolder;
+}
+
+.auth{
+	width: 100%;
+	text-align: center;
+}
+
+.auth .user_form{
+	border-radius: 10px;
+	color: #8BADA3;
+	font-family: thin_body_sego;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.auth div.user_form{
+	background-color: #F0E3C0;
+	opacity: 0.3;
+}
+
+.auth form.user_form{
+	background-color: #0D1F30;
+	text-align: right;
+}
+
+.auth .user_form img{
+	width: 150px;
+	margin-bottom: 10px;
+	opacity: 1;
+}
+
+.user_form{
+	margin: 0 auto;
+	margin-bottom: 20px;
+	padding: 10px;
+	width: 410px;
+}
+
+.user_form input, .user_form select{
+	font-family: reg_nav_sego;	
+	margin:10px;
+	margin-left: 20px;
+	padding-left: 5px;
+	border-radius: 5px;
+	border: none;
+	width: 240px;
+	transition: background-color 0.5s ease;
+}
+
+.user_form input:last-child{
+	background-color: ;
+	padding-left: 10px;
+}
+
+.user_form input:focus{
+	background-color: #F0E3C0;
+}
+
+.user_form input.logIn_btn, .user_form input.logIn_btn:hover{
+	width: 100px;
+	float: none;
+	margin: 10px;
+	border-radius: 7px;
+	border-style: none;
+	padding-left: 5px;
+}
+
+.err_msg{
+	font-family: reg_nav_sego;
+	color: #F0E3C0;
+}

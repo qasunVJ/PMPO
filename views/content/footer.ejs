@@ -1,0 +1,26 @@
+<footer>
+	<script type="text/javascript" src="/scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			var $val = 0;
+
+			$('#user_pic').click(function() {
+				if($val==0){
+					$('#user_settings').css({
+						'top':'3.5em',
+						'opacity':'1'
+					});
+					$val = 1;
+				}else{
+					$('#user_settings').css({
+						'top':'-50em',
+						'opacity':'0'
+					});
+					$val = 0;
+				}
+			});
+		});
+	</script>
+</footer>

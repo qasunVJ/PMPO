@@ -1,0 +1,17 @@
+<section class="index_img_wrap">
+	<div class="row">
+		<% for (var i = 0; i < info.length; i++) { %>
+			<div class="<%= deco.col_index_all %>">
+				<img src="/images/<%= info[i].img %>" class="index_img"></br>
+				<span class="intro_txt_exlarg"><%= info[i].tag %></span></br>
+				<div class="index_img_disc">
+					<%= info[i].summery %> 
+				</div>
+			</div>
+		<% }; %>
+	</div>
+</section>
+
+<div class="read_more">
+	<a href="/more"><div class="logIn_btn">learn more</div></a>
+</div>
