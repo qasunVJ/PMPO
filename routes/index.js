@@ -49,12 +49,27 @@ router.get('/login', function(req, res, next) {
   });
 });
 
+/* GET to-signin page. */
+router.get('/signin', function(req, res, next) {
+
+  var cont = [];
+  var col = [];
+  col = appdata.column_deco;
+  cont = appdata.landing;
+
+  res.render('auth', { 
+    title: 'signin',
+    info: cont,
+    deco: col[0] 
+  });
+});
+
 /* GET login_inputs. */
 router.post('/home', function(req, res, next) {
-	var users =[];
-	users = userdata.users;
-	for (var i = 0; i < users.length; i++) {
-		if(users[i].fname == req.body.fname && users[i].password == req.body.password){
+	var user =[];
+	user = userdata.users;
+	for (var i = 0; i < user.length; i++) {
+		if(user[i].fname == req.body.fname && user[i].password == req.body.password){
 			res.render('home', { 
    			title: 'home',
     		fname: req.body.fname,
@@ -63,12 +78,42 @@ router.post('/home', function(req, res, next) {
 
 		}else{
 			res.render('auth',{
-				title:'login_fail'
+				title:'login_fail',
+        fname: req.body.fname,
+        lname: req.body.lname
 			});
 		};
-	};
+	}; 
+});
 
-  
+ // GET signin_inputs. 
+// router.post('/home', function(req, res, next) {
+
+//   res.render('home',{
+//     title:'signin',
+//     fname: req.body.fname,
+//     lname: req.body.lname
+//   });
+// });
+
+// GET projects
+router.get('/projects', function(req, res, next) {
+
+  res.render('home',{
+    title:'projects',
+    fname: req.body.fname,
+    lname: req.body.lname
+  });
+});
+
+// GET discussions
+router.get('/discuss', function(req, res, next) {
+
+  res.render('home',{
+    title:'discussions',
+    fname: req.body.fname,
+    lname: req.body.lname
+  });
 });
 
 

@@ -9,7 +9,7 @@
 		<span class="or">or</span>
 		<a href="/login"><div class="logIn_btn">LOG IN</div></a>
 	</div>
-<% }else if (title=='login') { %>
+<% }else if (title=='login' || title=='login_fail') { %>
 	<div class="user_auth_bar">
 		<a href="/signin"><div class="signIn_link">Sign In</div></a>
 	</div>
@@ -19,23 +19,31 @@
 	</div>
 <% }else{ %>
 	<div class="nav_bar">
+		<ul class="nav_panel">
+			<a href="/home"><li class="nav_active">Home</li></a>
+			<a href="/projects"><li class="nav_btn">My Projects</li></a>
+			<a href="/discuss"><li class="nav_btn">Discussions</li></a>
+		</ul> 
 
-		<ul>
-			<a href="home.html"><li class="nav_active">Home</li></a>
-			<a href="my_projects.html"><li class="nav_btn">My Projects</li></a>
-			<a href="discussions.html"><li class="nav_btn">Discussions</li></a>
+		<!-- collapsible nav_panel -->
+		<ul id="alt_nav_panel">
+			<a href="./"><li class="nav_active">Home</li></a>
+			<a href="/projects"><li class="nav_btn">My Projects</li></a>
+			<a href="/discuss"><li class="nav_btn">Discussions</li></a>
 		</ul>
 
-		<ul id="user_acc_panel">
-			<li class="user_name"><%= fname %> <%= lname %></li>
-			<li class="user_btn">
-				<img src="/images/user.svg" id="user_pic">	
-				<ul id="user_settings">
-					<a href="acc_settings.html"><li class="nav_btn">Account Settings</li></a>
-					<a href="/"><li class="nav_btn">Sign Out</li></a>
-				</ul>
-			</li>
-		</ul>
+			<ul id="user_acc_panel">
+				<li class="user_btn" id="menu_btn"><img src="/images/menu.svg"></li>
+				<li class="user_name" id="user_name_out"><%= fname %></li>
+				<li class="user_btn">
+					<img src="/images/user.svg" id="user_pic">	
+					<ul id="user_settings">
+						<li class="user_name" id="user_name_in"><%= fname %> |</li>	
+						<a href="acc_settings.html"><li class="nav_btn">Account Settings</li></a>
+						<a href="/"><li class="nav_btn">Sign Out</li></a>
+					</ul>
+				</li>
+			</ul>
 		
 	</div>
 <% }; %>

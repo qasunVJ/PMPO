@@ -43,15 +43,15 @@ header{
 
 .logo div{
 	float: left;
-	display: inline-block;
 }
 
 .logo div a{
-		text-decoration: none;
+	text-decoration: none;
 	color: #ffffff;
 }
 
 .tagline{
+	display: block;
 	font-family: thin_body_sego;
 	font-size: 8px;
 	line-height: 7px;
@@ -68,7 +68,37 @@ header{
 }
 
 .nav_bar ul{
-	display: inline-block;
+	float: left;
+}
+
+#menu_btn {
+	display: none;
+}
+
+#user_name_in {
+    display: none;
+}
+
+@media screen and (max-width: 660px) {
+    .nav_panel {
+        display: none;
+    }
+
+    #menu_btn {
+    	display: block;
+    }
+
+    .tagline {
+    	display: none;
+    }
+
+    #user_name_out {
+    	display: none;
+    }
+
+    #user_name_in {
+    	display: block;
+    }
 }
 
 .nav_btn{
@@ -77,7 +107,7 @@ header{
 	list-style: none;
 	padding: 5px;
 	padding-top: 3px;
-	margin-right: 30px;
+	margin-right: 20px;
 	border-radius: 3px;
 	font-size: 13px;
 	float: left;
@@ -105,7 +135,7 @@ header{
 	list-style: none;
 	padding: 5px;
 	padding-top: 3px;
-	margin-right: 30px;
+	margin-right: 20px;
 	border-radius: 3px;
 	font-size: 13px;
 	float: left;
@@ -122,12 +152,11 @@ header{
 }
 
 .user_name{
-	display: block;
 	font-family: reg_nav_sego;
 	font-size: 16px;
 	list-style: none;
 	padding: 2px;
-	margin-right: 30px;
+	margin-right: 10px;
 	float: left;
 }
 
@@ -137,7 +166,7 @@ header{
 	font-size: 16px;
 	list-style: none;
 	padding: 2px;
-	margin-right: 30px;
+	margin-right: 10px;
 	float: left;
 }
 
@@ -145,15 +174,7 @@ li.user_btn img:hover{
 	cursor: pointer;
 }
 
-.nav_bar ul li.user_btn #user_icon{
-	background-image: url("../public/images/download.png");
-	width: 50px;
-	height: 50px;
-}
-
-
-
-#user_settings{
+#user_settings, #alt_nav_panel{
 	display: block;
 	width: 170px;
 	box-shadow: 0px 4px 10px #0D1F30;
@@ -164,13 +185,17 @@ li.user_btn img:hover{
 	position: absolute;
 	border-bottom-right-radius: 7px;
 	border-bottom-left-radius: 7px;
-	right: 2.7em;
+	right: 1.5em;
 	top: -50em;
 	opacity: 0;
 	transition: opacity 0.2s ease-in;
 }
 
-#user_settings .nav_btn{
+#alt_nav_panel {
+	right: 3.5em;
+}
+
+#user_settings .nav_btn, #alt_nav_panel .nav_btn, #alt_nav_panel .nav_active{
 	float: none;
 	text-align: right;
 	margin-bottom: 5px;
@@ -401,5 +426,8 @@ ul#user_settings a:last-child li{
 
 .err_msg{
 	font-family: reg_nav_sego;
+	font-size: 12px;
 	color: #F0E3C0;
+	float: left;
+	margin-left: 5px;
 }

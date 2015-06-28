@@ -6,7 +6,7 @@
 		"batch" : "2008",
 		"user_type": "Member",
 		"username": "kasun@pmpo",
-		"passworf": "abc123"
+		"password": "abc123"
 	},
 	{
 		"fname":"Garath",
@@ -14,7 +14,7 @@
 		"batch" : "2000",
 		"user_type": "Batch President",
 		"username": "garath@pmpo",
-		"passworf": "gbalebaleg"
+		"password": "gbalebaleg"
 	}
 	]
 }
