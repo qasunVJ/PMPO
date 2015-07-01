@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head> <% include ./content/head.ejs %> </head>
-<body style="background-color: #DB6C0F">
+<body style="background-color: #647678">
 
 <header> <% include ./content/header.ejs %> </header>
 
+<div class="alone_btn alt_auth_bar">
+	<a href="/signin"><div class="info_btn">Sign In</div></a></br>
+	<a href="/login"><div class="auth_btn">LOG IN</div></a>
+</div>
 
 <% if (title=='landing') { %>
 	<% include ./content/landing_content.ejs %>

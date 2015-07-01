@@ -6,6 +6,12 @@ light blue: #8BADA3
 beiage: #F0E3C0
 light green: #DB6C0F*/
 
+/* lighter blue :#D%FBFF
+grayish blue:#9FBCBF
+gray:#647678
+dark gray:2F3738
+bright blue:#59D*E5 */
+
 @font-face{
 	font-family:thin_body_sego;
 	src:url(../fonts/segoeuil.ttf);
@@ -60,6 +66,12 @@ header{
 	color: #8BADA3;
 }
 
+@media screen and (max-width: 350px){
+	.tagline {
+    	display: none;
+    }
+}
+
 .nav_bar{
 	margin: 0 auto;
 	margin: 15px;
@@ -86,10 +98,6 @@ header{
 
     #menu_btn {
     	display: block;
-    }
-
-    .tagline {
-    	display: none;
     }
 
     #user_name_out {
@@ -170,6 +178,19 @@ header{
 	float: left;
 }
 
+.alone_btn{
+	background-color: ;
+	margin: 10px;
+}
+
+.alone_btn div{
+	margin: 0 auto;
+}
+
+.alone_btn a, .alone_btn a:hover{
+	text-decoration: none;
+}
+
 li.user_btn img:hover{
 	cursor: pointer;
 }
@@ -220,22 +241,21 @@ ul#user_settings a:last-child li{
 	color: #ffffff;
 }*/
 
-.logIn_btn{
+.auth_btn{
 	font-size: 15px;
 	font-weight: bold;
+	text-align: center;
+	width: 80px;
 	color: #ffffff;
 	padding: 10px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	background-color:#DB6C0F;
 	border-radius: 7px;
-	float: left;
-	margin: 0 auto;
 	transition: background-color 0.5s ease;
 }
 
-
-.logIn_btn:hover{
+.auth_btn:hover{
 	font-size: 15px;
 	font-weight: bold;
 	color: #ffffff;
@@ -244,8 +264,6 @@ ul#user_settings a:last-child li{
 	padding-bottom: 5px;
 	background-color:#3B6670;
 	border-radius: 7px;
-	float: left;
-	margin: 0 auto;
 }
 
 .signIn_link{
@@ -253,8 +271,6 @@ ul#user_settings a:last-child li{
 	font-family: thin_body_sego;
 	color: #8BADA3;
 	padding: 10px;
-	float: left;
-	margin: 0 auto;
 	transition: color 0.5s ease;
 }
 
@@ -262,14 +278,60 @@ ul#user_settings a:last-child li{
 	font-size: 15px;
 	color: #ffffff;
 	padding: 10px;
-	float: left;
-	margin: 0 auto;
 }
 
 .user_auth_bar{
+	margin: 0 auto;
 	margin: 13px;
 	float: right;
-	display: inline-block;
+}
+
+.alt_auth_bar{
+	display: none;
+	margin-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: dotted #9FBCBF;
+	border-bottom-width: 1px;
+}
+
+@media screen and (max-width: 430px) {
+	.alt_auth_bar {
+  		display: block;
+  	}
+
+  	.user_auth_bar {
+  		display: none;
+  	}
+
+  	section.index_info_wrap{
+  		margin-top: 50px;
+  	}
+
+  	.index_info_wrap div.row div{
+  		margin-top: 0px;
+  		margin-bottom: 40px;
+  	}
+
+  	.auth .user_form{
+  		width: 250px;
+	}
+
+	.auth .user_form input, .auth .user_form select{
+  		width: 200px;
+	}
+}
+
+.user_auth_bar div, .user_auth_bar span{
+	float: left;
+}
+
+.alt_user_auth_bar{
+	width: 100%;
+	float: none;
+}
+
+.alt_user_auth_bar div.auth_btn, .alt_user_auth_bar span{
+	float: none;
 }
 
 .or{
@@ -281,28 +343,34 @@ ul#user_settings a:last-child li{
 }
 
 /*======================================================*/
-.index_img_wrap{
+.index_info_wrap{
 	margin-top: 100px;
 	margin-right: 10%;
 	margin-left: 10%;
 	margin-bottom: 50px;
 }
 
-.index_img_wrap .row div{
+.index_info_wrap .row div{
 	text-align: center;
 	margin-top: 30px;
 }
 
-.index_img{
+.index_info{
 	opacity: 0.2;
 }
 
-.more_index_img{
+.more_index_info{
 	width: 300px;
 	opacity: 0.2;
 }
 
-.index_img_disc{
+@media screen and (max-width: 390px) {
+	.more_index_info {
+  		width: 200px;
+  	}
+}
+
+.index_info_disc{
 	width:200px;
 	font-family: thin_body_sego;
 	font-size: 13px;
@@ -313,38 +381,36 @@ ul#user_settings a:last-child li{
 }
 
 .intro_txt_exlarg{
-	font-family: main_headFont; 
+	font-family: main_headFont;
 	font-size: 30px;
 	color: #F0E3C0;
 	opacity: 0.6;
 }
 
 /*==============================================*/
-
-.read_more{
-	font-family: thin_body_sego;
-	font-size: 12px;
-	text-decoration: none;
+.info_btn{
+	font-size: 15px;
 	text-align: center;
-	color: #F0E3C0;
-	opacity: 0.8;
-	margin-top: 30px;
-	margin-bottom: 50px;
-	transition: color 0.5s ease;
-}
-
-.read_more div.logIn_btn{
-	font-weight: normal;
-	width: 150px;
-	float: none;
-}
-
-.read_more:hover, .read_more a:hover{
-	font-family: thin_body_sego;
-	font-size: 12px;
-	text-decoration: none;
+	width: 80px;
 	color: #ffffff;
-	opacity: 1;
+	padding: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color:;
+	border-radius: 7px;
+	transition: background-color 0.5s ease;
+}
+
+.info_btn:hover{
+	font-size: 15px;
+	text-align: center;
+	color: #2F3738;
+	padding: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #9FBCBF;
+	border-radius: 7px;
+	transition: background-color 0.5s ease;
 }
 
 .more_pmpo{
@@ -369,7 +435,6 @@ ul#user_settings a:last-child li{
 	color: #8BADA3;
 	font-family: thin_body_sego;
 	font-size: 15px;
-	font-weight: normal;
 }
 
 .auth div.user_form{
@@ -392,11 +457,11 @@ ul#user_settings a:last-child li{
 	margin: 0 auto;
 	margin-bottom: 20px;
 	padding: 10px;
-	width: 410px;
+	width: 365px;
 }
 
 .user_form input, .user_form select{
-	font-family: reg_nav_sego;	
+	font-family: reg_nav_sego;
 	margin:10px;
 	margin-left: 20px;
 	padding-left: 5px;
@@ -409,19 +474,19 @@ ul#user_settings a:last-child li{
 .user_form input:last-child{
 	background-color: ;
 	padding-left: 10px;
+	font-weight: normal;
 }
 
 .user_form input:focus{
 	background-color: #F0E3C0;
 }
 
-.user_form input.logIn_btn, .user_form input.logIn_btn:hover{
+.user_form input.auth_btn, .user_form input.auth_btn:hover{
 	width: 100px;
 	float: none;
 	margin: 10px;
 	border-radius: 7px;
 	border-style: none;
-	padding-left: 5px;
 }
 
 .err_msg{

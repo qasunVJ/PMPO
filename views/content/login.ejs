@@ -1,15 +1,15 @@
-<section class="index_img_wrap">
+<section class="index_info_wrap">
 <% if (title=='login') { %>
 	<div class="auth">
 
 		<div class="user_form">
-			<img src="/images/user.svg">
-		</div>	
+			<img src="/images/user_hover.svg">
+		</div>
 
 		<form class="user_form" action="/home" method="POST">
 			<lable>Username</lable><input type="text" class="gen_txt_field" id="fname" name="fname">
 			<lable>Password</lable><input type="password" class="gen_txt_field" id="password" name="password">
-			<input type="submit" class="logIn_btn" value="Log In">
+			<input type="submit" class="auth_btn" value="Log In">
 		</form>
 
 		<span class="more_pmpo">New to PMPO? Go ahead and <a href="/signin">sign in</a> at PMPO</span>
@@ -20,14 +20,14 @@
 	<div class="auth">
 
 		<div class="user_form">
-			<img src="/images/user.svg">
-		</div>	
+			<img src="/images/user_hover.svg">
+		</div>
 
 		<form class="user_form" action="/home" method="POST">
 			<lable class="err_msg">Are you sure you already have an account?</lable></br>
 			<lable>Username</lable><input type="text" class="gen_txt_field" id="fname" name="fname" value="<%= fname %>">
 			<lable>Password</lable><input type="password" class="gen_txt_field" id="password" name="password">
-			<input type="submit" class="logIn_btn" value="Log In">
+			<input type="submit" class="auth_btn" value="Log In">
 		</form>
 
 		<span class="more_pmpo">New to PMPO? Go ahead and <a href="/signin">sign in</a> at PMPO</span>
@@ -35,7 +35,7 @@
 	</div>
 
 <% } else if (title=='signin') { %>
-	<div class="auth">	
+	<div class="auth">
 
 		<form class="user_form" action="/home" method="POST">
 			<lable>First Name</lable><input type="text" class="gen_txt_field" id="fname" name="fname"></br>
@@ -47,8 +47,8 @@
 			</select></br>
 			<lable>Username</lable><input type="text" class="gen_txt_field" id="username" name="username"></br>
 			<lable>Password</lable><input type="password" class="gen_txt_field" id="password" name="password"></br>
-			<lable>Conirm Password</lable><input type="password" class="gen_txt_field" id="confirmp" name="confirmp">
-			<input type="submit" class="logIn_btn" id="signin_sub" value="Sign In">
+			<lable>Confirm</lable><input type="password" class="gen_txt_field" id="confirmp" name="confirmp">
+			<input type="submit" class="auth_btn" id="signin_sub" value="Sign In">
 		</form>
 
 		<span class="more_pmpo">Already have an account? Go ahead and <a href="/login">log in</a></span>

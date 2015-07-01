@@ -12,10 +12,10 @@ router.get('/', function(req, res, next) {
 	col = appdata.column_deco;
 	cont = appdata.landing;
 
-  res.render('index', { 
+  res.render('index', {
   	title: 'landing',
   	info: cont,
-  	deco: col[0] 
+  	deco: col[0]
   });
 });
 
@@ -27,10 +27,10 @@ router.get('/more', function(req, res, next) {
 	col = appdata.column_deco;
 	cont = appdata.landing;
 
-  res.render('index', { 
+  res.render('index', {
   	title: 'more',
   	info: cont,
-  	deco: col[0] 
+  	deco: col[0]
   });
 });
 
@@ -42,10 +42,10 @@ router.get('/login', function(req, res, next) {
   col = appdata.column_deco;
   cont = appdata.landing;
 
-  res.render('auth', { 
+  res.render('auth', {
     title: 'login',
     info: cont,
-    deco: col[0] 
+    deco: col[0]
   });
 });
 
@@ -57,17 +57,20 @@ router.get('/signin', function(req, res, next) {
   col = appdata.column_deco;
   cont = appdata.landing;
 
-  res.render('auth', { 
+  res.render('auth', {
     title: 'signin',
     info: cont,
-    deco: col[0] 
+    deco: col[0]
   });
 });
 
 /* GET login_inputs. */
+var userFname;
 router.post('/home', function(req, res, next) {
 	var user =[];
 	user = userdata.users;
+  userFname = req.body.fname;
+  
 	for (var i = 0; i < user.length; i++) {
 		if(user[i].fname == req.body.fname && user[i].password == req.body.password){
 			res.render('home', { 
@@ -84,9 +87,10 @@ router.post('/home', function(req, res, next) {
 			});
 		};
 	}; 
+
 });
 
- // GET signin_inputs. 
+ // GET signin_inputs.
 // router.post('/home', function(req, res, next) {
 
 //   res.render('home',{
@@ -97,22 +101,29 @@ router.post('/home', function(req, res, next) {
 // });
 
 // GET projects
-router.get('/projects', function(req, res, next) {
+router.get('/home', function(req, res, next) {
 
   res.render('home',{
-    title:'projects',
-    fname: req.body.fname,
-    lname: req.body.lname
+    title:'home',
+    fname: userFname
+  });
+});
+
+// GET projects
+router.get('/projects', function(req, res, next) {
+
+  res.render('my_projects',{
+    title:'my_projects',
+    fname: userFname
   });
 });
 
 // GET discussions
 router.get('/discuss', function(req, res, next) {
 
-  res.render('home',{
+  res.render('discuss',{
     title:'discussions',
-    fname: req.body.fname,
-    lname: req.body.lname
+    fname: userFname
   });
 });
 

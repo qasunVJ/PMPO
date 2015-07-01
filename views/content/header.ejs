@@ -7,7 +7,7 @@
 	<div class="user_auth_bar">
 		<a href="/signin"><div class="signIn_link">Sign In</div></a>
 		<span class="or">or</span>
-		<a href="/login"><div class="logIn_btn">LOG IN</div></a>
+		<a href="/login"><div class="auth_btn">LOG IN</div></a>
 	</div>
 <% }else if (title=='login' || title=='login_fail') { %>
 	<div class="user_auth_bar">
@@ -15,19 +15,19 @@
 	</div>
 <% }else if (title=='signin') { %>
 	<div class="user_auth_bar">
-		<a href="/login"><div class="logIn_btn">LOG IN</div></a>
+		<a href="/login"><div class="auth_btn">LOG IN</div></a>
 	</div>
 <% }else{ %>
 	<div class="nav_bar">
 		<ul class="nav_panel">
-			<a href="/home"><li class="nav_active">Home</li></a>
+			<a href="/home"><li class="nav_btn">Home</li></a>
 			<a href="/projects"><li class="nav_btn">My Projects</li></a>
 			<a href="/discuss"><li class="nav_btn">Discussions</li></a>
 		</ul> 
 
 		<!-- collapsible nav_panel -->
 		<ul id="alt_nav_panel">
-			<a href="./"><li class="nav_active">Home</li></a>
+			<a href="/home"><li class="nav_btn">Home</li></a>
 			<a href="/projects"><li class="nav_btn">My Projects</li></a>
 			<a href="/discuss"><li class="nav_btn">Discussions</li></a>
 		</ul>

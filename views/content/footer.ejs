@@ -1,67 +1,14 @@
 <footer>
 	<script type="text/javascript" src="/scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/scripts/pmpo_func.js"></script>
 
 	<script>
 		$(document).ready(function () {
-			var $val = 0;
-			var $user = $('#user_pic');
-			var $menu = $('#menu_btn');
-
-			function dropDownMenu(handler, res) {
-				$(handler).click(function(){
-					if($val==0){
-						$(res).css({
-							'top':'3.5em',
-							'opacity':'1'
-						});
-						$val = 1;
-					}else{
-						$(res).css({
-							'top':'-50em',
-							'opacity':'0'
-						});
-						$val = 0;
-					}
-				});	
-			}
-
+			
 			dropDownMenu($user, '#user_settings');
 			dropDownMenu($menu, '#alt_nav_panel');
-
-			// // user_btn functionality
-			// $('#user_pic').click(function() {
-			// 	if($val==0){
-			// 		$('#user_settings').css({
-			// 			'top':'3.5em',
-			// 			'opacity':'1'
-			// 		});
-			// 		$val = 1;
-			// 	}else{
-			// 		$('#user_settings').css({
-			// 			'top':'-50em',
-			// 			'opacity':'0'
-			// 		});
-			// 		$val = 0;
-			// 	}
-			// });
-
-			// // menu_btn functionality
-			// $('#menu_btn').click(function() {
-			// 	if($val==0){
-			// 		$('#alt_nav_panel').css({
-			// 			'top':'3.5em',
-			// 			'opacity':'1'
-			// 		});
-			// 		$val = 1;
-			// 	}else{
-			// 		$('#alt_nav_panel').css({
-			// 			'top':'-50em',
-			// 			'opacity':'0'
-			// 		});
-			// 		$val = 0;
-			// 	}
-			// });
+			
 		});
 	</script>
 </footer>
